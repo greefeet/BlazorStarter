@@ -44,7 +44,8 @@ else
         {
             //https://gray-tree-0689fd800.azurestaticapps.net/api/WeatherForecast
             //forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("/api/WeatherForecast");
-            forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("https://gray-tree-0689fd800.azurestaticapps.net/api/WeatherForecast");
+            //forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("https://gray-tree-0689fd800.azurestaticapps.net/api/WeatherForecast");
+            forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
         }
         catch (Exception ex)
         {
