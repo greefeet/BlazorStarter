@@ -40,13 +40,15 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-      try
-      {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("/api/WeatherForecast");
-      }
-      catch (Exception ex)
-      {
-        Console.WriteLine(ex.ToString());
-      }
+        try
+        {
+            //https://gray-tree-0689fd800.azurestaticapps.net/api/WeatherForecast
+            //forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("/api/WeatherForecast");
+            forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("https://gray-tree-0689fd800.azurestaticapps.net/api/WeatherForecast");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+        }
     }
 }
